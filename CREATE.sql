@@ -16,7 +16,8 @@ constraint pk primary key (music_artist_id, music_genre_id)
 
 create table if not EXISTS  album (
 id SERIAL primary key,
-album_name VARCHAR(60) not null unique
+album_name VARCHAR(60) not null unique,
+year_of_release integer not NULL
 );
 
 create table if not exists album_artist (
@@ -28,7 +29,8 @@ constraint ps primary key (music_artist_id, album_id)
 create table if not EXISTS  track (
 id SERIAL primary key,
 track_name VARCHAR(60) not null unique,
-album_id INTEGER references album(id)
+album_id INTEGER references album(id),
+duration TIME NOT NULL
 );
 
 create table if not EXISTS  collection (
