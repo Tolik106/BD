@@ -1,8 +1,3 @@
-ALTER TABLE track 
-ADD duration TIME NOT NULL;
-
-ALTER TABLE album  
-ADD year_of_release integer not NULL;
 
 
 
